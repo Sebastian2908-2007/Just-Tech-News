@@ -7,6 +7,7 @@ Comment.init(
     {
         id: {
             type: DataTypes.INTEGER,
+            allownull: false,
             primaryKey: true,
             autoIncrement: true
         },
@@ -29,7 +30,6 @@ Comment.init(
         },
         post_id: {
              type: DataTypes.INTEGER,
-             allowNull: false,
              references: {
                  mode: 'post',
                  key: 'id'
